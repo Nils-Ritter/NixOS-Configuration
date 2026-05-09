@@ -30,6 +30,7 @@
 		pkgs.r2modman # mods for lethal company
 		pkgs.unzip
 		pkgs.libreoffice
+		pkgs.cargo
 	];
 
 	home.sessionVariables = {
