@@ -28,9 +28,14 @@
 		pkgs.tor-browser
 		pkgs.jetbrains.idea
 		pkgs.r2modman # mods for lethal company
-		pkgs.unzip
 		pkgs.libreoffice
 		pkgs.cargo
+		#additional nvim stuff
+		pkgs.unzip
+		pkgs.ltex-ls
+		pkgs.texliveFull
+		pkgs.texlab
+		pkgs.zathura
 	];
 
 	home.sessionVariables = {
