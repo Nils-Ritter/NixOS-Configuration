@@ -9,7 +9,6 @@
 	nixpkgs.config.allowUnfree = true;
 
 	home.packages = [
-		pkgs.firefox
 		pkgs.neovim
 		pkgs.gh
 		pkgs.wofi
@@ -25,7 +24,6 @@
 		pkgs.wine
 		pkgs.javaPackages.compiler.openjdk25
 		pkgs.python315
-		pkgs.tor-browser
 		pkgs.jetbrains.idea
 		pkgs.r2modman # mods for lethal company
 		pkgs.libreoffice
