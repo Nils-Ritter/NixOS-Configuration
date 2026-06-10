@@ -23,7 +23,7 @@
 		pkgs.obs-studio
 		pkgs.satisfactorymodmanager
 		pkgs.wine
-		pkgs.javaPackages.compiler.openjdk21
+		pkgs.javaPackages.compiler.openjdk25
 		pkgs.python315
 		pkgs.tor-browser
 		pkgs.jetbrains.idea

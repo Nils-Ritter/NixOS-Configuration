@@ -7,9 +7,10 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+    helium-browser.url = "github:oxcl/nix-flake-helium-browser";
 	};
 
-  outputs = { self, nixpkgs, ...}@inputs:
+  outputs = { self, nixpkgs, helium-browser, ...}@inputs:
   let
     system = "x86_64-linux";
   in {
@@ -17,7 +18,8 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
-	inputs.home-manager.nixosModules.default
+        inputs.home-manager.nixosModules.default
+        helium-browser.nixosModules.default
       ];
     };
   };

@@ -21,16 +21,13 @@
 
 	programs.hyprland.enable = true;
 
-
 	services.udev.extraRules = ''
 	  KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
 	'';
 
-	
 	i18n.inputMethod.enable = true;
 	i18n.inputMethod.type = "fcitx5";
 	i18n.inputMethod.fcitx5.addons = [pkgs.fcitx5-mozc];
-
 
 	services.displayManager.ly.enable = true;
 
@@ -48,7 +45,7 @@
 	  services.xserver.videoDrivers = [ "nvidia" ];
 
 	programs.steam.enable = true;
-
+	programs.helium.enable = true;
 	services.flatpak.enable = true;
 
 	users.users.nille = {
