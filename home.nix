@@ -34,6 +34,8 @@
 		pkgs.texliveFull
 		pkgs.texlab
 		pkgs.zathura
+		pkgs.blender
+		pkgs.zed-editor
 	];
 
 	home.sessionVariables = {
