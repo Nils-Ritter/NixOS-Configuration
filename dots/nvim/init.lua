@@ -291,10 +291,25 @@ require('lazy').setup({
 
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
+      --
+      local tb = require("telescope.builtin")
+      local wk = require("which-key")
+
       require('telescope').setup {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
-        --
+
+        wk.add({
+          mode = {"n"},
+          { "<leader>m", group = "Minecraft" },
+          {
+            "<leader>ms",
+            function()
+              tb.find_files({ searchh_dirs = {"<minecraft_sources_path>"} })
+            end,
+            desc = "Search Source",
+          },
+        }),
         -- defaults = {
         --   mappings = {
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
