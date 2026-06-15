@@ -36,6 +36,8 @@
 		pkgs.zathura
 		pkgs.blender
 		pkgs.go
+		pkgs.lua53Packages.tree-sitter-cli
+		pkgs.gcc
 	];
 
 	home.sessionVariables = {
