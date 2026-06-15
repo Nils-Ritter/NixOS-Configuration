@@ -38,6 +38,7 @@
 		pkgs.go
 		pkgs.lua53Packages.tree-sitter-cli
 		pkgs.gcc
+		pkgs.ripgrep
 	];
 
 	home.sessionVariables = {
