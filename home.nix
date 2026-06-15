@@ -35,7 +35,7 @@
 		pkgs.texlab
 		pkgs.zathura
 		pkgs.blender
-		pkgs.zed-editor
+		pkgs.go
 	];
 
 	home.sessionVariables = {
