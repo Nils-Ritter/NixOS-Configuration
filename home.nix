@@ -24,9 +24,6 @@
 		pkgs.wine
 		pkgs.javaPackages.compiler.openjdk25
 		pkgs.python315
-		pkgs.jetbrains.idea
-		pkgs.r2modman # mods for lethal company
-		pkgs.libreoffice
 		pkgs.cargo
 		#additional nvim stuff
 		pkgs.unzip
@@ -34,7 +31,6 @@
 		pkgs.texliveFull
 		pkgs.texlab
 		pkgs.zathura
-		pkgs.blender
 		pkgs.go
 		pkgs.lua53Packages.tree-sitter-cli
 		pkgs.gcc
