@@ -35,6 +35,9 @@
 		pkgs.lua53Packages.tree-sitter-cli
 		pkgs.gcc
 		pkgs.ripgrep
+		pkgs.anki
+		pkgs.mgba
+		pkgs.vesktop
 	];
 
 	home.sessionVariables = {
