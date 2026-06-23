@@ -38,6 +38,8 @@
 		pkgs.anki
 		pkgs.mgba
 		pkgs.vesktop
+		pkgs.waytrogen
+		pkgs.mpvpaper
 	];
 
 	home.sessionVariables = {
