@@ -47,6 +47,7 @@
 
 	xdg.configFile."hypr".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/dots/hypr";
 	xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/dots/nvim";
+	xdg.configFile."kitty".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/dots/kitty";
 
 	# Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;
