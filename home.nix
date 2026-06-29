@@ -40,6 +40,11 @@
 		pkgs.vesktop
 		pkgs.waytrogen
 		pkgs.mpvpaper
+		pkgs.ollama
+		pkgs.cpuminer
+		pkgs.xmrig
+		pkgs.alacritty
+		pkgs.tmux
 	];
 
 	home.sessionVariables = {

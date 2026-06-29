@@ -24,11 +24,6 @@
 	services.udev.extraRules = ''
 	  KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
 	'';
-
-	i18n.inputMethod.enable = true;
-	i18n.inputMethod.type = "fcitx5";
-	i18n.inputMethod.fcitx5.addons = [pkgs.fcitx5-mozc];
-
 	services.displayManager.ly.enable = true;
 
 	hardware.nvidia = {
@@ -38,7 +33,17 @@
 	    open = false;  # Use proprietary for Steam compatibility
 	    nvidiaSettings = true;
 	    package = config.boot.kernelPackages.nvidiaPackages.stable;  # Or .latest
-	  };
+	};
+
+	i18n.inputMethod = {
+		enable = true;
+		type = "fcitx5";
+
+		fcitx5.addons = with pkgs; [
+			fcitx5-mozc
+			fcitx5-gtk
+		];
+	};
 
 	hardware.graphics.enable = true;
 
