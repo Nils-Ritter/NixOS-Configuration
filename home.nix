@@ -45,6 +45,9 @@
 		pkgs.xmrig
 		pkgs.alacritty
 		pkgs.tmux
+		pkgs.jetbrains.idea
+		pkgs.tor-browser
+		pkgs.proton-vpn
 	];
 
 	home.sessionVariables = {
