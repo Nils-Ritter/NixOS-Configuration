@@ -14,11 +14,9 @@
 		pkgs.wofi
 		pkgs.goxlr-utility
 		pkgs.pavucontrol
-		pkgs.streamcontroller
 		pkgs.kdePackages.dolphin
 		pkgs.hyprshot
 		pkgs.prismlauncher
-		pkgs.osu-lazer-bin
 		pkgs.obs-studio
 		pkgs.satisfactorymodmanager
 		pkgs.wine
@@ -36,18 +34,15 @@
 		pkgs.gcc
 		pkgs.ripgrep
 		pkgs.anki
-		pkgs.mgba
-		pkgs.vesktop
-		pkgs.waytrogen
-		pkgs.mpvpaper
-		pkgs.ollama
-		pkgs.cpuminer
-		pkgs.xmrig
+		#pkgs.vesktop
+		pkgs.discord
 		pkgs.alacritty
 		pkgs.tmux
 		pkgs.jetbrains.idea
 		pkgs.tor-browser
-		pkgs.proton-vpn
+		pkgs.android-tools
+		pkgs.godot
+		pkgs.mpv
 	];
 
 	home.sessionVariables = {

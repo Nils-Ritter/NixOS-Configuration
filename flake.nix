@@ -8,9 +8,10 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
     helium-browser.url = "github:oxcl/nix-flake-helium-browser";
+    concord.url = "github:chojs23/concord";
 	};
 
-  outputs = { self, nixpkgs, helium-browser, ...}@inputs:
+  outputs = { self, nixpkgs, helium-browser, concord, ...}@inputs:
   let
     system = "x86_64-linux";
   in {

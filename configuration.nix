@@ -6,6 +6,10 @@
 		inputs.home-manager.nixosModules.default
 	];
 
+	nixpkgs.config.permittedInsecurePackages = [
+                "electron-40.10.5"
+	];
+
 	nix.settings.experimental-features = [ "nix-command" "flakes"];
 
 	nixpkgs.config.allowUnfree = true;
@@ -19,7 +23,7 @@
 
 	time.timeZone = "Europe/Berlin";
 
-	programs.hyprland.enable = true;
+	services.desktopManager.plasma6.enable = true;
 
 	services.udev.extraRules = ''
 	  KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
@@ -46,8 +50,7 @@
 	};
 
 	hardware.graphics.enable = true;
-
-	  services.xserver.videoDrivers = [ "nvidia" ];
+	services.xserver.videoDrivers = [ "nvidia" ];
 
 	programs.steam.enable = true;
 	programs.helium.enable = true;
@@ -55,7 +58,7 @@
 
 	users.users.nille = {
 		isNormalUser = true;
-		extraGroups = [ "wheel" "input" ];
+		extraGroups = [ "wheel" "input" "audio" ];
 		packages = with pkgs; [
 			nordzy-cursor-theme
 			nordzy-icon-theme
@@ -79,7 +82,16 @@
 		git
 		wget
 		kitty
+		inputs.concord.packages.${pkgs.system}.default
 	];
+
+	  services.pipewire = {
+	    enable = true;
+	    pulse.enable = true;
+	    alsa.enable = true;
+	    alsa.support32Bit = true;
+	    wireplumber.enable = true;
+	  };
 
 	networking.firewall.enable = false;
 
