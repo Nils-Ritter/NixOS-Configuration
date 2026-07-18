@@ -10,6 +10,8 @@
                 "electron-40.10.5"
 	];
 
+	nixpkgs.overlays = [ inputs.millennium.overlays.default ];
+
 	nix.settings.experimental-features = [ "nix-command" "flakes"];
 
 	nixpkgs.config.allowUnfree = true;
@@ -52,7 +54,10 @@
 	hardware.graphics.enable = true;
 	services.xserver.videoDrivers = [ "nvidia" ];
 
-	programs.steam.enable = true;
+	programs.steam = {
+		enable = true;
+		package = pkgs.millennium-steam;
+	};
 	programs.helium.enable = true;
 	services.flatpak.enable = true;
 

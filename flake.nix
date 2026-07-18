@@ -9,6 +9,7 @@
 		};
     helium-browser.url = "github:oxcl/nix-flake-helium-browser";
     concord.url = "github:chojs23/concord";
+    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
 	};
 
   outputs = { self, nixpkgs, helium-browser, concord, ...}@inputs:
