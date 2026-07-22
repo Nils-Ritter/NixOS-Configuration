@@ -10,6 +10,9 @@
                 "electron-40.10.5"
 	];
 
+	programs.appimage.enable = true;
+	programs.appimage.binfmt = true;
+
 	nixpkgs.overlays = [ inputs.millennium.overlays.default ];
 
 	nix.settings.experimental-features = [ "nix-command" "flakes"];
@@ -81,6 +84,8 @@
 	programs.nix-ld.libraries = with pkgs; [
 		# Add any missing dynamic libraries for unpackaged programs
 		# here, NOT in environment.systemPackages
+		fontconfig
+		freetype
 	];
 
 	environment.systemPackages = with pkgs; [

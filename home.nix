@@ -37,6 +37,14 @@
 		pkgs.mpv
 		pkgs.rustup
 		pkgs.nodejs_26
+		pkgs.markdownlint-cli
+		#OSDEV
+		pkgs.qemu
+		pkgs.coreboot-toolchain.i386
+		pkgs.limine
+		pkgs.gnumake
+		pkgs.xorriso
+		pkgs.gptfdisk
 	];
 
 	home.sessionVariables = {};
